@@ -1,12 +1,45 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Agendamento de Serviços</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    
+    <div class="container">
+        <h1>Agendamento de Serviços</h1>
+
+        <form class="form-agendamento" id="formAgendamento">
+            <label for="nome">Nome do Cliente:</label>
+            <input type="text" id="nome" name="nome" required>
+
+            <label for="servico">Tipo de Serviço:</label>
+            <input type="text" id="servico" name="servico" required>
+
+            <label for="data">Data do Agendamento:</label>
+            <input type="date" id="data" name="data" required>
+
+            <label for="endereco">Endereço (opcional):</label>
+            <input type="text" id="endereco" name="endereco">
+
+            <button type="submit">Agendar</button>
+        </form>
+
+        <h2>Agendamentos Registrados</h2>
+        <table id="tabelaAgendamentos">
+            <thead>
+                <tr>
+                    <th>Cliente</th>
+                    <th>Serviço</th>
+                    <th>Data</th>
+                    <th>Endereço</th>
+                    <th>Ação</th>
+                </tr>
+            </thead>
+            <tbody></tbody>
+        </table>
+    </div>
+
+    <script src="script.js"></script>
 </body>
 </html>
